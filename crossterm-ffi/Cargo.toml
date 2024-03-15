@@ -1,0 +1,21 @@
+[package]
+name = "crossterm"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "crossterm"
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+crossterm = "0.27.0"
+uniffi = "0.25.2"
+uniffi_macros = "0.25.2"
+uniffi_bindgen = "0.25.2"
+
+[build-dependencies]
+uniffi = { version = "0.25.2", features = ["build"] }
+uniffi_bindgen = "0.25.2"
+camino = "1.1.1"
+
+

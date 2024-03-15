@@ -1,0 +1,3 @@
+[bindings.kotlin]
+package_name = "com.wire.crypto"
+cdylib_name = "crossterm_ffi"
