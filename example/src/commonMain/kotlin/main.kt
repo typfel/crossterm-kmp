@@ -1,14 +1,15 @@
-import crossterm.ClearType
-import crossterm.Terminal
-import crossterm.Event
-import crossterm.KeyCode
+import io.github.typfel.crossterm.ClearType
+import io.github.typfel.crossterm.Terminal
+import io.github.typfel.crossterm.Event
+import io.github.typfel.crossterm.KeyCode
+import io.github.typfel.crossterm.Command
 
 fun main(args: Array<String>) {
     val terminal = Terminal()
     terminal.execute(
         listOf(
-            crossterm.Command.EnableMouseCapture,
-            crossterm.Command.EnterAlternateScreen
+            Command.EnableMouseCapture,
+            Command.EnterAlternateScreen
         )
     )
     terminal.enableRawMode()
@@ -18,8 +19,8 @@ fun main(args: Array<String>) {
 
         terminal.execute(
             listOf(
-                crossterm.Command.Clear(ClearType.CURRENT_LINE),
-                crossterm.Command.MoveTo(0u, 0u)
+                Command.Clear(ClearType.CURRENT_LINE),
+                Command.MoveTo(0u, 0u)
             )
         )
 
@@ -29,8 +30,8 @@ fun main(args: Array<String>) {
             terminal.disableRawMode()
             terminal.execute(
                 listOf(
-                    crossterm.Command.DisableMouseCapture,
-                    crossterm.Command.LeaveAlternateScreen
+                    Command.DisableMouseCapture,
+                    Command.LeaveAlternateScreen
                 )
             )
             return

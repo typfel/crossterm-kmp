@@ -1,3 +1,2 @@
-[bindings.kotlin]
-package_name = "com.wire.crypto"
+package_name = "io.github.typfel.crossterm"
 cdylib_name = "crossterm_ffi"
