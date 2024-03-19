@@ -2,7 +2,7 @@
 
 kotlin = "1.9.21"
 
-gradle-publish = "1.2.1"
+maven-publish = "0.28.0"
 buildconfig = "4.1.2"
 
 kotlinx-serialization = "1.6.1"
@@ -23,7 +23,7 @@ kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlin-atomicfu = { id = "org.jetbrains.kotlin.plugin.atomicfu", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
-gradle-publish = { id = "com.gradle.plugin-publish", version.ref = "gradle-publish" }
+maven-publish = { id = "com.vanniktech.maven.publish", version.ref = "maven-publish" }
 buildconfig = { id = "com.github.gmazzo.buildconfig", version.ref = "buildconfig" }
 uniffi = { id = "io.gitlab.trixnity.uniffi.kotlin.multiplatform", version.ref = "uniffi" }
 

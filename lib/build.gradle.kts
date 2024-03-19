@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.uniffi)
+    alias(libs.plugins.maven.publish)
 }
 
 repositories {
@@ -47,5 +48,12 @@ kotlin {
                 implementation(kotlin("test"))
             }
         }
+    }
+}
+
+project.afterEvaluate {
+    val buildBindings = tasks.getByName("buildBindings")
+    tasks.withType(org.gradle.jvm.tasks.Jar::class.java) {
+        dependsOn(buildBindings)
     }
 }
