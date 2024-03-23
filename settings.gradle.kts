@@ -8,4 +8,5 @@ pluginManagement {
 }
 
 include(":lib")
-include("example")
+include("samples:input")
+include("samples:mosaic")
