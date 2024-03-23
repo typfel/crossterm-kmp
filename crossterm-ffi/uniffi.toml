@@ -1,2 +1,2 @@
 package_name = "io.github.typfel.crossterm"
-cdylib_name = "crossterm_ffi"
+cdylib_name = "crossterm"
